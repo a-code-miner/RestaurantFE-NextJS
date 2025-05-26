@@ -4,7 +4,7 @@ import { IoMdLogIn } from "react-icons/io";
 
 const Navbar = () => {
     return (
-        <nav className='flex justify-between items-center bg-white/10 backdrop-blur-md border border-b-cyan-200/20 shadow-sm h-20 text-[18px] font-bold p-4 fixed top-0 left-0 right-0 z-50 px-20'>
+        <nav className='flex justify-between items-center bg-white/10 backdrop-blur-md  border-b-cyan-200/20 shadow-sm h-20 text-[18px] font-bold p-4 fixed top-0 left-0 right-0 z-50 px-20'>
             <div className='text-white'><Link href={'#'}>لوگوی رستورانت</Link></div>
             <div className='text-white'>
                 <ul className='flex space-x-4'>
