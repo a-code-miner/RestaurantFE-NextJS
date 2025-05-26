@@ -1,8 +1,13 @@
-
+import HomePage from "./(main)/HomePage/HomePage";
+import Navbar from "./components/Navbar";
 export default function Home() {
 	return (
-		<div>
 
+		<div>
+			<Navbar />
+			<div>
+				<HomePage />
+			</div>
 		</div>
 	);
 }
