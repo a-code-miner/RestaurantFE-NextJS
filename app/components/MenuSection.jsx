@@ -102,8 +102,8 @@ const MenuSection = () => {
 	const currentMenu = MENUS.find(menu => menu.key === selectedMenu)
 
 	return (
-		<div className='mb-20'>
-			<h2 className='text-5xl font-bold text-center my-20'>منوهای ما</h2>
+		<div className='my-20 bg-gray-50 py-15'>
+			<h2 className='text-5xl font-bold text-center mb-10'>منوهای ما</h2>
 			<div className='flex justify-center gap-4 mb-10'>
 				{MENUS.map(menu => (
 					<button
