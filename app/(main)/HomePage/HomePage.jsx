@@ -4,6 +4,7 @@ import Gallery from '@/app/components/Gallery'
 import GuestComments from '@/app/components/GuestComments'
 import Header from '@/app/components/Header'
 import MenuSection from '@/app/components/MenuSection'
+import WalletButton from '@/app/components/WalletButton'
 import React from 'react'
 
 const HomePage = () => {
@@ -15,6 +16,7 @@ const HomePage = () => {
             <Gallery />
             <GuestComments />
             <Footer />
+            <WalletButton />
         </div>
     )
 }

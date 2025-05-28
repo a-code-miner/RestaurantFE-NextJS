@@ -5,7 +5,7 @@ const AboutSection = () => {
         <div>
             <h2 className='text-3xl md:text-5xl font-bold text-center my-10 md:my-20'>داستان ما</h2>
             <div className='flex flex-col 2xl:flex-row items-center justify-between gap-8'>
-                <section className='bg-white/15 backdrop-blur-md py-8 md:py-16 px-4 md:px-10 max-w-full md:max-w-4xl md:mr-10 rounded-2xl shadow-[0px_0px_55px_5px_rgba(0,_0,_0,_0.1)] mt-6 md:mt-10 transition-transform duration-300 hover:scale-[1.02] w-full'>
+                <section className='bg-white/15 backdrop-blur-md py-8 md:py-16 px-4 md:px-10 max-w-full md:max-w-4xl rounded-2xl shadow-[0px_0px_55px_5px_rgba(0,_0,_0,_0.1)] mt-6 md:mt-10 transition-transform duration-300 hover:scale-[1.02] w-full'>
                     <div className="container mx-auto px-0 md:px-6">
                         <h2 className="text-2xl md:text-3xl font-bold text-right mb-4 md:mb-8">میراثی از طعم</h2>
                         <p className="text-gray-700 text-base md:text-lg text-right mb-4 md:mb-6">
