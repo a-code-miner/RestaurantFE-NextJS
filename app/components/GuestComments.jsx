@@ -3,7 +3,7 @@ import CommentBox from './CommentBox'
 
 const GuestComments = () => {
     return (
-        <div className='bg-gray-50 py-20 px-6 shadow-lg h-[750px]'>
+        <div className='bg-gray-50 py-20 px-6 shadow-lg h-auto'>
             {/* What our guests say section */}
             <h2 className='text-3xl md:text-5xl font-bold text-center mb-20'>نظرات مهمانان ما</h2>
             <div className='max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6'>

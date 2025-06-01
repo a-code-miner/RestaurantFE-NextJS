@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { FaHeart } from 'react-icons/fa';
 import { IoMdAdd, IoMdRemove } from 'react-icons/io';
+import { useBasket } from './BasketContext';
 
 const MealCard = ({
     image = 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80',
@@ -11,11 +12,13 @@ const MealCard = ({
     description = 'توضیحات نمونه برای غذا',
 }) => {
     const [isFavorite, setIsFavorite] = useState(false);
-    const [basketCount, setBasketCount] = useState(0);
+    const { addToBasket, removeFromBasket, basket } = useBasket();
+    const basketItem = basket.find(item => item.name === name);
+    const count = basketItem ? basketItem.count : 0;
 
     const handleFavorite = () => setIsFavorite(fav => !fav);
-    const handleAdd = () => setBasketCount(count => count + 1);
-    const handleRemove = () => setBasketCount(count => (count > 0 ? count - 1 : 0));
+    const handleAdd = () => addToBasket({ name, price, image });
+    const handleRemove = () => removeFromBasket({ name, price, image });
 
     return (
         <div className="bg-white/80 rounded-2xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-xs mx-auto">
@@ -37,10 +40,10 @@ const MealCard = ({
                         {score}
                     </span>
                     <div className="flex items-center gap-2">
-                        <button onClick={handleRemove} className="bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full p-2 transition disabled:opacity-50" disabled={basketCount === 0}>
+                        <button onClick={handleRemove} className="bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-full p-2 transition disabled:opacity-50">
                             <IoMdRemove size={18} />
                         </button>
-                        <span className="min-w-[24px] text-center font-bold">{basketCount}</span>
+                        <span className="min-w-[24px] text-center font-bold">{count}</span>
                         <button onClick={handleAdd} className="bg-orange-400 hover:bg-orange-500 text-white rounded-full p-2 transition">
                             <IoMdAdd size={18} />
                         </button>
