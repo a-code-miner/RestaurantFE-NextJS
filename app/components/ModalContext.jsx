@@ -24,7 +24,7 @@ export const ModalProvider = ({ children }) => {
     useEffect(() => {
         if (pathname === '/BasketPage') {
             setIsBasketModalOpen(true);
-        } else if (pathname === '/wallet') {
+        } else if (pathname === '/WalletPage') {
             setIsWalletModalOpen(true);
         }
     }, [pathname]);
@@ -48,7 +48,7 @@ export const ModalProvider = ({ children }) => {
 
     const closeWalletModal = () => {
         setIsWalletModalOpen(false);
-        if (pathname === '/wallet') {
+        if (pathname === '/WalletPage') {
             router.push(previousPath);
         }
     };

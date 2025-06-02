@@ -102,7 +102,7 @@ const MenuSection = () => {
 	const currentMenu = MENUS.find(menu => menu.key === selectedMenu)
 
 	return (
-		<div className='my-20 bg-gray-50 py-15'>
+		<div id="menu-section" className='mt-20 bg-gray-50 py-15'>
 			<h2 className='text-5xl font-bold text-center mb-10'>منوهای ما</h2>
 			<div className='flex justify-center gap-4 mb-10'>
 				{MENUS.map(menu => (
@@ -117,6 +117,12 @@ const MenuSection = () => {
 						{menu.title}
 					</button>
 				))}
+				<a
+					href="/OtherMenus"
+					className="px-6 py-2 rounded-full font-bold border transition-all duration-200 bg-white/70 text-blue-500 border-blue-300 hover:bg-blue-100"
+				>
+					منوهای دیگر
+				</a>
 			</div>
 			<div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-8'>
 				{currentMenu.meals.map((meal, idx) => (
