@@ -5,7 +5,6 @@ import AuthTestComponent from "./components/AuthTestComponent"; // فقط برا
 export default function Home() {
 	return (
 		<div>
-			<AuthTestComponent /> {/* فقط برای تست - بعداً حذف کنید */}
 			<div>
 				<HomePage />
 			</div>
