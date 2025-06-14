@@ -19,9 +19,10 @@ export const AuthProvider = ({ children }) => {
 
     // داده‌های استاتیک برای تست
     const staticUserData = {
-        id: 'USER-12345',
+        id: '3',
         name: 'علی احمدی',
         email: 'ali@example.com',
+        role: 'admin',
         phone: '09123456789'
     };
 

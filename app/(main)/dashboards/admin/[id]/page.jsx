@@ -2,7 +2,7 @@
 import React from 'react'
 import { useAuth } from '@/app/components/AuthContext';
 
-const CustomerDashboard = () => {
+const AdminDashboard = () => {
     const { isLoggedIn, user } = useAuth();
 
     if (!isLoggedIn) {
@@ -192,4 +192,4 @@ const CustomerDashboard = () => {
     );
 };
 
-export default CustomerDashboard;
+export default AdminDashboard;

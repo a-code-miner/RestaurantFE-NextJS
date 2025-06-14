@@ -19,9 +19,9 @@ export default function RootLayout({ children }) {
 			<AuthProvider>
 				<BasketProvider>
 					<ModalProvider>
-						<body className="bg-gradient-to-bl from-cyan-100/50 to-gray-400 min-h-screen">
+						<body className="bg-gray-200 min-h-screen">
 							<AuthTestComponent /> {/* فقط برای تست - بعداً حذف کنید */}
-							{pathname.startsWith('/dashboards') ? (
+							{pathname.startsWith('/dashboards') || pathname.startsWith('/login') || pathname.startsWith('/signup') ? (
 								children
 							) : (
 								<>
